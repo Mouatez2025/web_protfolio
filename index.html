@@ -11,13 +11,15 @@
      <div class="container">
         <nav>
             <img src="images-2/logo.png" alt="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidmenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#protfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
             <p>UI/UX Designer</p>
@@ -172,7 +174,7 @@
 
 
             </div>
-            <a href="#" class="btn btn2">Download CV</a>
+            <a href="images-2/my-cv.pdf" download class="btn btn2">Download CV</a>
         </div>
 
         <div class="contact-right">
@@ -180,14 +182,16 @@
         <input type="text" name="" id="Name" placeholder="Your Name" required>
         <input type="email" name="" id="Email" placeholder="Your Email" required> 
         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-        <button type="submit">Submit</button>
+        <button type="submit" class="btn btn2">Submit</button>
         </form>
 
         </div>
 
      </div>
     </div>
-
+     <div class="copyright">
+        <p>Copyright @ mouatez. Made with <i class="fa-solid fa-heart"></i></p>
+     </div>
 
 
 </div>
@@ -206,6 +210,15 @@
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+<script>
+    var sidmenu = document.getElementById("sidmenu");
+    function openmenu(){
+        sidmenu.style.right = "0";
+    }
+    function closemenu(){
+        sidmenu.style.right = "-200px";
     }
 </script>
     </body>
